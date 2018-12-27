@@ -49,10 +49,11 @@ const CollectionCreateForm = Form.create()(
               {getFieldDecorator('modifier', {
                 initialValue: 'public',
               })(
-                <Radio.Group>
-                  <Radio value="public">Public</Radio>
-                  <Radio value="private">Private</Radio>
-                </Radio.Group>
+                <DatePicker
+                    showTime={{ defaultValue: moment('08:00:00', 'HH:mm:ss') }}
+                    format="YYYY-MM-DD HH:mm:ss"
+                    allowClear={false}  
+                  />
               )}
             </Form.Item>
           </Form>
